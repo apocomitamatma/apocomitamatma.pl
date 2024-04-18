@@ -1,0 +1,21 @@
+_commit: 0.0.2rc-219-g781ce0c
+_src_path: gh:skeleton-ci/skeleton-python
+author: bswck
+cli: false
+copyright: Bartosz Sławecki
+description: Web services for the best math YouTuber in Poland.
+docs: false
+email: bartoszpiotrslawecki@gmail.com
+github: apocomitamatma
+license: MIT
+package: gauss
+precommit: true
+pypi: false
+pypy: false
+python: '3.10'
+python_until: ''
+repo: apocomitamatma.pl
+tests: true
+tidelift: false
+visibility: public
+wip: true
