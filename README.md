@@ -1,2 +1,2 @@
 # apocomitamatma.pl
-Svelte 5 app for enhancing the best math YouTuber's web presence.
+FastAPI + Svelte 5 personal web app of [@apocomitamatma](https://youtube.com/@apocomitamatma).
