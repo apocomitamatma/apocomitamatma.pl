@@ -1,4 +1,6 @@
 <script>
+	import Sprite from './Sprite.svelte';
+	import rizz from '$lib/images/sprites/rizz.png';
 </script>
 
 <svelte:head>
@@ -6,7 +8,9 @@
 	<meta name="description" content="ApocoMItaMATMA.pl" />
 </svelte:head>
 
-<section></section>
+<section>
+	<Sprite imageUrl={rizz} />
+</section>
 
 <style>
 </style>
