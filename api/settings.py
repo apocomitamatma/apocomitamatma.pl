@@ -16,7 +16,7 @@ CHANNEL_PREFIX = "UC"
 PLAYLIST_PREFIX = "UU"
 
 
-class CategoryFlags(enum.IntFlag, boundary=enum.FlagBoundary.CONFORM):
+class Category(enum.IntFlag, boundary=enum.FlagBoundary.CONFORM):
     e8 = 1 << 0
     mp = 1 << 1
     mr = 1 << 2
@@ -31,7 +31,7 @@ class YouTubeSettings(BaseSettings):
     channel_id: str
     api_key: SecretStr
     playlists_endpoint: str = "https://www.googleapis.com/youtube/v3/playlistItems"
-    category_patterns: dict[CategoryFlags, re.Pattern]
+    category_patterns: dict[Category, re.Pattern]
     model_config = SettingsConfigDict(toml_file="settings.toml", env_prefix="YOUTUBE_")
 
     @property

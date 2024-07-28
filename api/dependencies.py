@@ -8,7 +8,7 @@ from httpx import AsyncClient, QueryParams
 from pydantic import AliasGenerator, BaseModel, ConfigDict, Field, TypeAdapter
 from pydantic.alias_generators import to_camel
 
-from api.settings import CategoryFlags, settings_var
+from api.settings import Category, settings_var
 
 if TYPE_CHECKING:
     from typing import TypeAlias
@@ -16,11 +16,11 @@ if TYPE_CHECKING:
 
 class YouTubeVideo(BaseModel):
     id: str
-    categories: CategoryFlags
+    categories: Category
 
 
 VideosAdapter = TypeAdapter(list[YouTubeVideo])
-YouTubeStats: TypeAlias = dict[CategoryFlags, Annotated[int, Field(default=0)]]
+YouTubeStats: TypeAlias = dict[Category, Annotated[int, Field(default=0)]]
 
 
 class YouTubePlaylistItemSnippet(BaseModel):
@@ -58,9 +58,9 @@ class YouTubeListRequest(YouTubeRequest):
     page_token: str | None = None
 
 
-def get_categories_from_description(description: str) -> CategoryFlags:
+def get_categories_from_description(description: str) -> Category:
     settings = settings_var.get()
-    flags = CategoryFlags(0)
+    flags = Category(0)
     for category, pattern in settings.category_patterns.items():
         if category.is_bulk and flags:
             break
