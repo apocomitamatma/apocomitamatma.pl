@@ -113,7 +113,7 @@
 		position: absolute;
 	}
 
-	@media (max-width: 1052px) {
+	@media (max-width: 1210px) {
 		.landing {
 			flex-direction: column;
 		}
