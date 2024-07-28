@@ -19,7 +19,6 @@ class YouTubeVideo(BaseModel):
     categories: Category
 
 
-VideosAdapter = TypeAdapter(list[YouTubeVideo])
 YouTubeStats: TypeAlias = dict[Category, Annotated[int, Field(default=0)]]
 
 
@@ -105,7 +104,7 @@ async def fetch_all_videos() -> list[YouTubeVideo]:
     while next_page:
         new_videos, next_page = await fetch_videos(next_page)
         videos.extend(new_videos)
-    return VideosAdapter.validate_python(videos)
+    return TypeAdapter(list[YouTubeVideo]).validate_python(videos)
 
 
 async def get_stats() -> YouTubeStats:
