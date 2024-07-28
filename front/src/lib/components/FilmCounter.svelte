@@ -1,35 +1,17 @@
 <script>
 	import { onMount } from 'svelte';
 
+	import statistics from '$lib/statistics.json';
+
 	/**
 	 * @type {string}
 	 */
 	export let category;
 
-	let number = 0;
-	let displayedNumber = '100';
-
-	$: {
-		let roundedNumber = Math.round(number / 10) * 10;
-		displayedNumber = roundedNumber.toString() + (number % 10 == 0 ? '' : '+');
-	}
-
-	async function fetchStats() {
-		try {
-			const response = await fetch(`/api/stats/${category}`);
-			const data = await response.json();
-
-			if (!data['success']) {
-				throw Error(`unsuccessful API response: ${data}`);
-			}
-
-			number = data['number'];
-		} catch (error) {
-			console.error('Error fetching stats:', error);
-		}
-	}
-
-	onMount(fetchStats);
+	const videoCounts = statistics.videoCount;
+	export const videoCount = videoCounts[category];
+	const roundedVideoCount = Math.round(videoCount / 10) * 10;
+	export const videoCountForDisplay = roundedVideoCount.toString() + (videoCount % 10 == 0 ? '' : '+');
 </script>
 
-{displayedNumber}
+{videoCountForDisplay}
