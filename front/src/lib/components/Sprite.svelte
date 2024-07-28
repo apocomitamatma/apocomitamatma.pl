@@ -16,6 +16,7 @@
 <style>
 	.sprite-container {
 		max-width: var(--size);
+		max-height: 70vh;
 		aspect-ratio: 1 / 1;
 		border-radius: 50%;
 		backdrop-filter: brightness(50%) blur(17px);

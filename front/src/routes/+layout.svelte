@@ -1,6 +1,5 @@
 <script>
-	import Nav from './Nav.svelte';
-	import Container from './Container.svelte';
+	import { Nav, Container } from '$lib/components';
 </script>
 
 <main>

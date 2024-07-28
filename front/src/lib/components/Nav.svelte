@@ -12,7 +12,7 @@
 <div class="nav-wrapper">
 	<nav class="nav">
 		<div class="nav-left">
-			<div class="website-name"></div>
+			<a href="/" class="website-name"> </a>
 		</div>
 		<div class="nav-center" class:is-open={isMenuOpen}>
 			<a href="/" class="nav-button">Początek</a>
@@ -40,7 +40,6 @@
 	.nav-wrapper {
 		border-bottom: 8px solid var(--theme-red);
 		padding: 15px;
-		margin-bottom: 20px;
 		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
 	}
@@ -65,12 +64,12 @@
 
 	.website-name {
 		height: 100px;
-		margin-top: 10px;
-		width: 100%; /* Make the logo take up as much space as possible */
+		top: 50%;
+		width: 80%;
 		background-image: url('$lib/images/name.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: fixed;
+		background-position: center;
 	}
 
 	.nav-center {
