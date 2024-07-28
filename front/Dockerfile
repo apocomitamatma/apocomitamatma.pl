@@ -6,7 +6,7 @@ WORKDIR /app
 COPY ./ ./
 
 FROM base AS prod-deps
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+RUN pnpm install --prod --frozen-lockfile
 RUN pnpm run build
 
 FROM base AS final
