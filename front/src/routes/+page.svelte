@@ -88,7 +88,7 @@
 	}
 
 	.landing-description {
-		font-size: xx-large;
+		font-size: 2em;
 	}
 
 	.landing-carousel-element {
@@ -117,5 +117,15 @@
 		.landing {
 			flex-direction: column;
 		}
-	}
+
+		.landing-right {
+			padding-left: 5vw;
+			padding-right: 5vw;
+		}
+
+		.landing-description {
+			font-size: 2em;
+		}
+
+}
 </style>

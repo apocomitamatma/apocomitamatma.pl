@@ -8,6 +8,7 @@
 
 <style>
 	.logo img {
+		width: 80%;
 		max-width: 700px;
 	}
 </style>
