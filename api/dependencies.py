@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import Counter
 from typing import TYPE_CHECKING, Annotated, Literal
 
+from aiocache import cached  # type: ignore[import-untyped]
 from httpx import AsyncClient, QueryParams
 from pydantic import AliasGenerator, BaseModel, ConfigDict, Field, TypeAdapter
 from pydantic.alias_generators import to_camel
@@ -97,9 +98,7 @@ async def fetch_videos(
     return videos, response.next_page_token
 
 
-# TODO: cache
-
-
+@cached(ttl=24 * 60 * 60)
 async def fetch_all_videos() -> list[YouTubeVideo]:
     """Fetch all videos from the configured playlist. Exhausts all pages."""
     videos, next_page = await fetch_videos()

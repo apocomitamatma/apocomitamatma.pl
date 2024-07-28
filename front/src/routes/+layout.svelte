@@ -1,10 +1,14 @@
 <script>
 	import Nav from './Nav.svelte';
+	import Container from './Container.svelte';
 </script>
 
 <main>
+	<div class="background"></div>
 	<Nav></Nav>
-	<slot />
+	<Container>
+		<slot />
+	</Container>
 </main>
 
 <style>
@@ -14,14 +18,32 @@
 		--theme-yellow: #ffbf01;
 		--theme-blue: #0173f8;
 		--theme-red: #c50000;
+		--max-page-width: 1424px;
 	}
 
 	:global(body) {
 		font-family: 'Albert Sans', sans-serif;
 		color: white;
-		background: url('$lib/images/background.png') center/cover fixed no-repeat;
 		margin: 0;
 		height: 100%;
 		overflow-x: hidden;
+		position: relative;
+		background: black; /* Fallback color */
+	}
+
+	.background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('$lib/images/background.png') center/cover fixed no-repeat;
+		filter: blur(30px);
+		z-index: -1;
+	}
+
+	:global(main) {
+		position: relative;
+		z-index: 1;
 	}
 </style>

@@ -1,7 +1,6 @@
 <script>
 	import { faDiscord, faYoutube, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons';
-	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import logo from '$lib/images/name.gif'; // Import the logo
+	import Icon from './Icon.svelte';
 
 	let isMenuOpen = false;
 
@@ -13,7 +12,7 @@
 <div class="nav-wrapper">
 	<nav class="nav">
 		<div class="nav-left">
-			<div class="brand-logo"></div>
+			<div class="website-name"></div>
 		</div>
 		<div class="nav-center" class:is-open={isMenuOpen}>
 			<a href="/" class="nav-button">Początek</a>
@@ -22,18 +21,10 @@
 			<a href="/contact" class="nav-button">Kontakt</a>
 		</div>
 		<div class="nav-right" class:is-open={isMenuOpen}>
-			<a href="/discord" target="_blank" rel="noopener noreferrer">
-				<FontAwesomeIcon icon={faDiscord} />
-			</a>
-			<a href="/youtube" target="_blank" rel="noopener noreferrer">
-				<FontAwesomeIcon icon={faYoutube} />
-			</a>
-			<a href="/facebook" target="_blank" rel="noopener noreferrer">
-				<FontAwesomeIcon icon={faFacebook} />
-			</a>
-			<a href="/tiktok" target="_blank" rel="noopener noreferrer">
-				<FontAwesomeIcon icon={faTiktok} />
-			</a>
+			<a href="/discord" target="_blank" rel="noopener noreferrer"><Icon icon={faDiscord} /></a>
+			<a href="/youtube" target="_blank" rel="noopener noreferrer"><Icon icon={faYoutube} /></a>
+			<a href="/facebook" target="_blank" rel="noopener noreferrer"><Icon icon={faFacebook} /></a>
+			<a href="/tiktok" target="_blank" rel="noopener noreferrer"><Icon icon={faTiktok} /></a>
 		</div>
 		<div class="menu-toggle">
 			<button on:click={toggleMenu}>☰</button>
@@ -42,16 +33,21 @@
 </div>
 
 <style>
+	:root {
+		--nav-min-height: 100px;
+	}
+
 	.nav-wrapper {
 		border-bottom: 8px solid var(--theme-red);
 		padding: 15px;
-		backdrop-filter: blur(10px);
+		margin-bottom: 20px;
+		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
 	}
 
 	.nav {
-		height: 100px; /* Adjust the height as needed */
-		max-width: 1424px;
+		min-height: var(--nav-min-height);
+		max-width: var(--max-page-width);
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;
@@ -67,10 +63,10 @@
 		align-items: center;
 	}
 
-	.brand-logo {
+	.website-name {
 		height: 100px;
+		margin-top: 10px;
 		width: 100%; /* Make the logo take up as much space as possible */
-
 		background-image: url('$lib/images/name.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -93,7 +89,14 @@
 		padding: 10px;
 		background: none;
 		cursor: pointer;
-		font-size: 24px; /* Increased font size */
+		font-size: 24px;
+		position: relative;
+		overflow: hidden;
+		transition: color 0.3s ease;
+	}
+
+	.nav-button:hover {
+		color: var(--theme-yellow);
 	}
 
 	.nav-right a {
@@ -105,15 +108,14 @@
 		display: none;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1210px) {
 		.nav {
 			flex-direction: column;
 			align-items: center;
 			gap: 25px;
 		}
 
-		.brand-logo {
-			height: 100px;
+		.website-name {
 			background-position: center;
 		}
 
@@ -134,6 +136,11 @@
 			align-items: center;
 		}
 
+		.nav-right {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
 		.nav-center.is-open,
 		.nav-right.is-open {
 			display: flex;
@@ -141,6 +148,20 @@
 
 		.menu-toggle {
 			display: block;
+			position: absolute;
+			top: calc(var(--nav-min-height) / 3);
+			right: 15px;
+		}
+
+		.menu-toggle button {
+			width: 70px;
+			font-size: x-large;
+			border-width: 8px;
+			border-color: var(--theme-red);
+			color: var(--theme-yellow);
+			border-radius: 20%;
+			background-color: rgba(0, 0, 0, 0.2);
+			aspect-ratio: 1 / 1;
 		}
 	}
 </style>
