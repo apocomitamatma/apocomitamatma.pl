@@ -30,6 +30,10 @@
 		background: black; /* Fallback color */
 	}
 
+	:global(main) {
+		font-size: 2em;
+	}
+
 	.background {
 		position: fixed;
 		top: 0;

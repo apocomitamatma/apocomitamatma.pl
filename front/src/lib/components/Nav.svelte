@@ -50,6 +50,8 @@
 		max-width: var(--max-page-width);
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 5vw;
+		padding-right: 5vw;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

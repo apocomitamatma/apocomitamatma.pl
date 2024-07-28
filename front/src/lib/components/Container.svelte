@@ -6,5 +6,8 @@
 		max-width: var(--max-page-width);
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		padding-top: 5vh;
 	}
 </style>
