@@ -119,6 +119,8 @@
 		}
 
 		.website-name {
+			min-width: 360px;
+			width: 50%;
 			background-position: center;
 		}
 
@@ -151,7 +153,8 @@
 
 		.menu-toggle {
 			display: block;
-			top: calc(var(--nav-min-height) / 3);
+			position: absolute;
+			top: calc((var(--nav-min-height) + 40px) / 2);
 			margin-top: -30px;
 			margin-bottom: -15px;
 			right: 15px;
@@ -160,7 +163,6 @@
 		.menu-toggle button {
 			font-size: xx-large;
 			border: none;
-			width: 100vw;
 			/* border-width: 8px;
 			border-color: var(--theme-red);
 			border-radius: 20%; */
