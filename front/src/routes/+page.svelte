@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>apocomitamatma.pl | Początek</title>
+	<title>apocomitamatma.pl</title>
 	<meta name="description" content="apocomitamatma.pl" />
 </svelte:head>
 
