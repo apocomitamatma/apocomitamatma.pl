@@ -119,7 +119,7 @@
 		}
 
 		.website-name {
-			min-width: 360px;
+			min-width: 300px;
 			width: 50%;
 			background-position: center;
 		}
@@ -154,14 +154,14 @@
 		.menu-toggle {
 			display: block;
 			position: absolute;
-			top: calc((var(--nav-min-height) + 40px) / 2);
+			top: calc((var(--nav-min-height) + 30px) / 2);
 			margin-top: -30px;
 			margin-bottom: -15px;
 			right: 15px;
 		}
 
 		.menu-toggle button {
-			font-size: xx-large;
+			font-size: 1.5em;
 			border: none;
 			/* border-width: 8px;
 			border-color: var(--theme-red);
@@ -174,5 +174,13 @@
 			cursor: pointer;
 		}
 
+	@media (max-width: 605px) {
+		.website-name {
+			background-position: left;
+		}
+		.nav-left {
+			justify-content: left;
+		}
+	}
 }
 </style>
