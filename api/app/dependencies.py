@@ -8,7 +8,7 @@ from httpx import AsyncClient, QueryParams
 from pydantic import AliasGenerator, BaseModel, ConfigDict, Field, TypeAdapter
 from pydantic.alias_generators import to_camel
 
-from api.settings import Category, settings_var
+from app.settings import Category, settings_var
 
 if TYPE_CHECKING:
     from typing import TypeAlias

@@ -32,7 +32,11 @@ class YouTubeSettings(BaseSettings):
     api_key: SecretStr
     playlists_endpoint: str = "https://www.googleapis.com/youtube/v3/playlistItems"
     category_patterns: dict[Category, re.Pattern]
-    model_config = SettingsConfigDict(toml_file="settings.toml", env_prefix="YOUTUBE_")
+    model_config = SettingsConfigDict(
+        toml_file="settings.toml",
+        env_prefix="YOUTUBE_",
+        env_file=".env",
+    )
 
     @property
     def playlist_id(self) -> str:

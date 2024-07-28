@@ -6,8 +6,8 @@ from typing import Annotated
 from fastapi import Depends, FastAPI, HTTPException
 from pydantic import BaseModel, BeforeValidator
 
-from api.dependencies import YouTubeStats, Category, get_stats
-from api.settings import YouTubeSettings, settings_var
+from app.dependencies import YouTubeStats, Category, get_stats
+from app.settings import YouTubeSettings, settings_var
 
 app = FastAPI()
 settings = YouTubeSettings()  # type: ignore[call-arg]
