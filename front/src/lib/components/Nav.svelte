@@ -3,6 +3,7 @@
 	import Icon from './Icon.svelte';
 
 	let isMenuOpen = false;
+	$: toggleMenuSymbol = isMenuOpen ? '<span style="filter: brightness(50%);">☰</span>' : '☰';
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -27,7 +28,7 @@
 			<a href="/tiktok" target="_blank" rel="noopener noreferrer"><Icon icon={faTiktok} /></a>
 		</div>
 		<div class="menu-toggle">
-			<button on:click={toggleMenu}>☰</button>
+			<button on:click={toggleMenu}>{@html toggleMenuSymbol}</button>
 		</div>
 	</nav>
 </div>
@@ -66,6 +67,7 @@
 		height: 100px;
 		top: 50%;
 		width: 80%;
+		min-width: 200px;
 		background-image: url('$lib/images/name.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -147,20 +149,26 @@
 
 		.menu-toggle {
 			display: block;
-			position: absolute;
 			top: calc(var(--nav-min-height) / 3);
+			margin-top: -30px;
+			margin-bottom: -15px;
 			right: 15px;
 		}
 
 		.menu-toggle button {
-			width: 70px;
-			font-size: x-large;
-			border-width: 8px;
+			font-size: xx-large;
+			border: none;
+			width: 100vw;
+			/* border-width: 8px;
 			border-color: var(--theme-red);
+			border-radius: 20%; */
 			color: var(--theme-yellow);
-			border-radius: 20%;
-			background-color: rgba(0, 0, 0, 0.2);
-			aspect-ratio: 1 / 1;
+			background: transparent;
 		}
-	}
+
+		.menu-toggle button:hover {
+			cursor: pointer;
+		}
+
+}
 </style>
