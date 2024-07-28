@@ -69,7 +69,7 @@
 		height: 100px;
 		top: 50%;
 		width: 80%;
-		min-width: 200px;
+		min-width: 250px;
 		background-image: url('$lib/images/name.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -120,6 +120,7 @@
 
 		.website-name {
 			min-width: 300px;
+			max-width: 300px;
 			width: 50%;
 			background-position: center;
 		}
@@ -129,6 +130,10 @@
 		.nav-right {
 			width: 100%;
 			justify-content: center;
+		}
+
+		.nav-left {
+			justify-content: left;
 		}
 
 		.nav-center {
@@ -157,7 +162,7 @@
 			top: calc((var(--nav-min-height) + 30px) / 2);
 			margin-top: -30px;
 			margin-bottom: -15px;
-			right: 15px;
+			right: 5vw;
 		}
 
 		.menu-toggle button {
@@ -173,14 +178,5 @@
 		.menu-toggle button:hover {
 			cursor: pointer;
 		}
-
-	@media (max-width: 605px) {
-		.website-name {
-			background-position: left;
-		}
-		.nav-left {
-			justify-content: left;
-		}
-	}
 }
 </style>
