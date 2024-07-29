@@ -45,7 +45,7 @@
 					Jesteś na stronie gdzie jest <a href="#o-mnie">trochę o mnie</a>,<br />
 					<a href="/films">o moich filmach</a> i o
 					<a href="/faq">pytaniach, które często dostaję</a>.<br /><br />
-					Szukasz korepetycji? Zapraszam Cię
+					<b>Szukasz korepetycji?</b> Zapraszam Cię
 					<a href="/contact">tutaj</a>.<br />
 				</article>
 			</div>
