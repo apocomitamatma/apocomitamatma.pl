@@ -50,7 +50,7 @@
 	}
 
 	.footer-note {
-		font-size: x-large;
+		font-size: 1.125rem;
 	}
 
 	@media (max-width: 1000px) {

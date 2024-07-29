@@ -125,10 +125,10 @@
 		position: absolute;
 		bottom: 25%;
 		height: 100px;
-		margin-bottom: -20px;
+		margin-bottom: -10%;
 		text-align: center;
 		font-weight: bolder;
-		font-size: 1.25em;
+		font-size: 1.25rem;
 		text-shadow:
 			10px 10px 10px #000000,
 			10px 10px 10px #000000;
@@ -148,7 +148,7 @@
 	}
 
 	.landing-description {
-		font-size: larger;
+		font-size: 1.25rem;
 		text-wrap: balance;
 		padding-top: 10px;
 		padding-bottom: 10px;

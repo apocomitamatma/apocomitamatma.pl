@@ -86,6 +86,7 @@
 	}
 
 	.nav-button {
+		font-size: 1.125rem;
 		text-decoration: none;
 		color: inherit;
 		padding: 10px;
@@ -102,7 +103,6 @@
 
 	.nav-right a {
 		color: inherit;
-		font-size: 24px;
 	}
 
 	.menu-toggle {
@@ -156,14 +156,12 @@
 		.menu-toggle {
 			display: block;
 			position: absolute;
-			top: calc((var(--nav-height) + 30px) / 2);
-			margin-top: -30px;
-			margin-bottom: -15px;
 			right: 5vw;
+			transform: translate(0, 100%);
 		}
 
 		.menu-toggle button {
-			font-size: 1.5em;
+			font-size: 1.5rem;
 			border: none;
 			/* border-width: 8px;
 			border-color: var(--theme-red);

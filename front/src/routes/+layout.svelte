@@ -37,7 +37,6 @@
 
 	:global(main) {
 		font-family: 'Albert Sans', sans-serif;
-		font-size: x-large;
 		color: white;
 		height: 100%;
 		display: flex;
