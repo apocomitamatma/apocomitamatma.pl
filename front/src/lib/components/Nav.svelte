@@ -40,7 +40,8 @@
 
 	.nav-wrapper {
 		border-bottom: 8px solid var(--theme-red);
-		padding: 15px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
 	}
@@ -92,7 +93,6 @@
 		padding: 10px;
 		background: none;
 		cursor: pointer;
-		font-size: 24px;
 		position: relative;
 		overflow: hidden;
 		transition: color 0.3s ease;
@@ -119,9 +119,8 @@
 		}
 
 		.website-name {
-			min-width: 300px;
-			max-width: 300px;
-			width: 50%;
+			min-width: 370px;
+			width: 35%;
 			background-position: center;
 		}
 
@@ -178,5 +177,5 @@
 		.menu-toggle button:hover {
 			cursor: pointer;
 		}
-}
+	}
 </style>

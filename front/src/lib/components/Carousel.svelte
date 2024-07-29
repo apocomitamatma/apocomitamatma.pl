@@ -15,6 +15,12 @@
 	onMount(() => {
 		items = Array.from(slots.children);
 		showItem(currentIndex);
+		/**
+		 * @type {HTMLDivElement}
+		 */
+		// @ts-ignore
+		const carouselInner = document.getElementsByClassName('carousel-inner')[0];
+		carouselInner.style.display = 'flex';
 	});
 
 	/**
@@ -48,10 +54,10 @@
 		overflow: hidden;
 	}
 	.carousel-inner {
-		display: flex;
+		display: none;
 		flex-direction: column;
 	}
-	.carousel-inner > * {
+	.carousel-inner > :global(*) {
 		display: none;
 		width: 100%;
 	}

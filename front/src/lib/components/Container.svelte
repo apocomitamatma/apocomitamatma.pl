@@ -9,5 +9,6 @@
 		padding-left: 5vw;
 		padding-right: 5vw;
 		padding-top: 5vh;
+		padding-bottom: 5vh;
 	}
 </style>

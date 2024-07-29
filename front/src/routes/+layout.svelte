@@ -1,13 +1,14 @@
 <script>
-	import { Nav, Container } from '$lib/components';
+	import { Nav, Container, Footer } from '$lib/components';
 </script>
 
 <main>
 	<div class="background"></div>
-	<Nav></Nav>
+	<Nav />
 	<Container>
 		<slot />
 	</Container>
+	<Footer />
 </main>
 
 <style>
@@ -27,11 +28,34 @@
 		height: 100%;
 		overflow-x: hidden;
 		position: relative;
-		background: black; /* Fallback color */
+		background: black;
 	}
 
 	:global(main) {
-		font-size: 2em;
+		font-size: x-large;
+		min-height: 100vh;
+		text-align: justify;
+	}
+
+	:global(a) {
+		color: var(--theme-blue);
+		filter: brightness(150%);
+		text-decoration: none;
+	}
+
+	:global(a):hover {
+		filter: none;
+	}
+
+	:global(.section-name) {
+		color: inherit;
+		filter: none;
+		text-decoration: inherit;
+	}
+
+	:global(.section-name):hover::after {
+		content: ' 🔗';
+		color: darkgrey;
 	}
 
 	.background {

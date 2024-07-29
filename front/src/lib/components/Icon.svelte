@@ -2,6 +2,7 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 
 	export let icon;
+	export let size = 'xl';
 	let bounce = false;
 </script>
 
@@ -15,6 +16,6 @@
 	}}
 >
 	{#key bounce}
-		<FontAwesomeIcon {bounce} {icon} />
+		<FontAwesomeIcon {bounce} {icon} {size} />
 	{/key}
 </div>

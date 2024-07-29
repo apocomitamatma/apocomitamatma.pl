@@ -9,6 +9,6 @@
 <style>
 	.logo img {
 		width: 80%;
-		max-width: 700px;
+		max-width: 750px;
 	}
 </style>
