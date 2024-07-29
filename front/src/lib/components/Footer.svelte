@@ -15,7 +15,8 @@
 	}
 
 	.footer-wrapper {
-		width: 100vw;
+		flex-shrink: 0;
+		width: 100%;
 		border-top: 8px solid var(--theme-red);
 		padding-top: 15px;
 		padding-bottom: 15px;
@@ -27,10 +28,8 @@
 	.footer {
 		min-height: var(--footer-min-height);
 		max-width: var(--max-page-width);
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 5vw;
-		padding-right: 5vw;
+		margin-inline: auto;
+		padding-inline: 5vw;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

@@ -2,6 +2,7 @@
 	import { Carousel, FilmCounter, Logo } from '$lib/components';
 	import { FiguresSprite } from '$lib/components/sprites';
 
+	/** @type {Array<{category: 'e8' | 'mp' | 'mr', target: string}>} */
 	const categories = [
 		{ category: 'e8', target: 'ósmoklasistów' },
 		{ category: 'mp', target: 'maturzystów<br>(poziom podstawowy)' },
@@ -157,8 +158,7 @@
 			flex-direction: column;
 		}
 		:global(.logo) {
-			margin-left: auto;
-			margin-right: auto;
+			margin-inlinet: auto;
 		}
 
 		.landing-left {

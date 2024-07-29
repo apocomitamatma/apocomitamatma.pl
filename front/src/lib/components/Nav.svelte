@@ -34,8 +34,8 @@
 </div>
 
 <style>
-	:root {
-		--nav-min-height: 100px;
+	:global(:root) {
+		--nav-height: 100px;
 	}
 
 	.nav-wrapper {
@@ -47,12 +47,10 @@
 	}
 
 	.nav {
-		min-height: var(--nav-min-height);
+		min-height: var(--nav-height);
 		max-width: var(--max-page-width);
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 5vw;
-		padding-right: 5vw;
+		margin-inline: auto;
+		padding-inline: 5vw;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -158,7 +156,7 @@
 		.menu-toggle {
 			display: block;
 			position: absolute;
-			top: calc((var(--nav-min-height) + 30px) / 2);
+			top: calc((var(--nav-height) + 30px) / 2);
 			margin-top: -30px;
 			margin-bottom: -15px;
 			right: 5vw;

@@ -3,12 +3,10 @@
 
 <style>
 	.container {
-		min-height: 100%;
+		flex: 1 0 auto;
 		max-width: var(--max-page-width);
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 5vw;
-		padding-right: 5vw;
+		margin-inline: auto;
+		padding-inline: 5vw;
 		padding-top: 50px;
 		padding-bottom: 50px;
 	}

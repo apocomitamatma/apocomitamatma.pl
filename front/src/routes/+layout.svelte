@@ -21,17 +21,27 @@
 		--max-page-width: 1424px;
 	}
 
-	:global(body) {
-		font-family: 'Albert Sans', sans-serif;
-		color: white;
+	:global(*) {
+		box-sizing: border-box;
+	}
+
+	:global(html, body) {
 		margin: 0;
-		overflow-x: hidden;
+		padding: 0;
+		height: 100%;
+	}
+
+	:global(body) {
 		background: black;
 	}
 
 	:global(main) {
-		height: 100vh;
+		font-family: 'Albert Sans', sans-serif;
 		font-size: x-large;
+		color: white;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 		text-align: justify;
 	}
 
@@ -58,17 +68,10 @@
 
 	.background {
 		position: fixed;
-		top: 0;
-		left: 0;
 		width: 100%;
 		height: 100%;
-		background: url('$lib/images/background.png') center/cover fixed no-repeat;
+		background: url('$lib/images/background.png') center/cover fixed repeat;
 		filter: brightness(20%);
 		z-index: -1;
-	}
-
-	:global(main) {
-		position: relative;
-		z-index: 1;
 	}
 </style>

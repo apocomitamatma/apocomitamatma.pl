@@ -2,6 +2,8 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 
 	export let icon;
+
+	/** @type {import('@fortawesome/fontawesome-svg-core').SizeProp}*/
 	export let size = 'xl';
 	let bounce = false;
 </script>
