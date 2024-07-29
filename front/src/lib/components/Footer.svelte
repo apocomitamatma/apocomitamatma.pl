@@ -8,6 +8,9 @@
 	}
 
 	.footer-wrapper {
+		width: 100vw;
+		bottom: 0;
+		margin-top: 100vh;
 		border-top: 8px solid var(--theme-red);
 		padding-top: 15px;
 		padding-bottom: 15px;
