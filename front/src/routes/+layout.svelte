@@ -74,7 +74,7 @@
 		height: 100%;
 		height: 100svh;
 		background: url('$lib/images/background.png') center/cover fixed repeat;
-		filter: brightness(20%);
+		filter: brightness(15%);
 		z-index: -1;
 	}
 </style>
