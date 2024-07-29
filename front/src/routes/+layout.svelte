@@ -56,6 +56,7 @@
 	}
 
 	:global(.section-name) {
+		scroll-margin-top: 20px;
 		color: inherit;
 		filter: none;
 		text-decoration: inherit;
@@ -70,6 +71,7 @@
 		position: fixed;
 		width: 100%;
 		height: 100%;
+		height: 100lvh;
 		background: url('$lib/images/background.png') center/cover fixed repeat;
 		filter: brightness(20%);
 		z-index: -1;
