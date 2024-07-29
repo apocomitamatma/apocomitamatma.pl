@@ -1,9 +1,16 @@
+<script>
+	import buildInfo from '$lib/build.json';
+</script>
+
 <div class="footer-wrapper">
 	<footer class="footer">
 		<div class="footer-row">
 			<span class="footer-note footer-left">© 2024 apocomitamatma.pl</span>
 			<span class="footer-note footer-right">
-				Projekt i wykonanie strony: <a href="https://github.com/bswck">Bartosz Sławecki</a>
+				Projekt i wykonanie strony:
+				<a href="https://github.com/bswck" title="SHA wersji: {buildInfo.sha}">
+					Bartosz Sławecki
+				</a>
 			</span>
 		</div>
 	</footer>
