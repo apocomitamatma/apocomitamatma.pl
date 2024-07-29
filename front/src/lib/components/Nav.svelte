@@ -117,7 +117,7 @@
 		}
 
 		.website-name {
-			min-width: 370px;
+			min-width: 275px;
 			width: 35%;
 			background-position: center;
 		}
