@@ -1,5 +1,12 @@
 <div class="footer-wrapper">
-	<footer class="footer"><span class="footer-note">© 2024 apocomitamatma.pl</span></footer>
+	<footer class="footer">
+		<div class="footer-row">
+			<span class="footer-note footer-left">© 2024 apocomitamatma.pl</span>
+			<span class="footer-note footer-right">
+				Projekt i wykonanie strony: <a href="https://github.com/bswck">Bartosz Sławecki</a>
+			</span>
+		</div>
+	</footer>
 </div>
 
 <style>
@@ -30,7 +37,32 @@
 		align-items: center;
 	}
 
+	.footer-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+	}
+
+	.footer-left {
+		text-align: left;
+	}
+
+	.footer-right {
+		text-align: right;
+	}
+
 	.footer-note {
-		font-size: large;
+		font-size: x-large;
+	}
+
+	@media (max-width: 1000px) {
+		.footer-row {
+			grid-template-columns: unset;
+			gap: 1em;
+		}
+
+		.footer-right {
+			text-align: left;
+		}
 	}
 </style>
