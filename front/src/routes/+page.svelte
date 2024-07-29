@@ -41,12 +41,16 @@
 			<div class="landing-description">
 				<Logo />
 				<article>
-					<i>Kolorowa matematyka z poczuciem humoru.</i><br /><br />
-					Jesteś na stronie gdzie jest <a href="#o-mnie">trochę o mnie</a>,<br />
-					<a href="/films">o moich filmach</a> i o
-					<a href="/faq">pytaniach, które często dostaję</a>.<br /><br />
-					<b>Szukasz korepetycji?</b> Zapraszam Cię
-					<a href="/contact">tutaj</a>.<br />
+					<p><i>Kolorowa matematyka z poczuciem humoru.</i></p>
+					<p>
+						Jesteś na stronie gdzie jest <a href="#o-mnie">trochę o mnie</a>,
+						<a href="/films">o moich filmach</a> i o
+						<a href="/faq">pytaniach, które często dostaję</a>.
+					</p>
+					<p>
+						<b>Szukasz korepetycji?</b> Zapraszam Cię
+						<a href="/contact">tutaj</a>.
+					</p>
 				</article>
 			</div>
 		</div>
