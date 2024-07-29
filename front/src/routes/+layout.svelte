@@ -41,6 +41,7 @@
 		color: white;
 		height: 100%;
 		display: flex;
+		overflow-x: hidden;
 		flex-direction: column;
 		text-align: justify;
 	}
