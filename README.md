@@ -1,2 +1,4 @@
 # apocomitamatma.pl
-FastAPI + Svelte 5 personal web app of [@apocomitamatma](https://youtube.com/@apocomitamatma).
+Personal website of [@apocomitamatma](https://youtube.com/@apocomitamatma).
+
+Built using **Svelte 5** by [@bswck](https://github.com/bswck).
