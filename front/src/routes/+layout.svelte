@@ -71,7 +71,7 @@
 		position: fixed;
 		width: 100%;
 		height: 100%;
-		height: 100lvh;
+		height: 100svh;
 		background: url('$lib/images/background.png') center/cover fixed repeat;
 		filter: brightness(20%);
 		z-index: -1;
