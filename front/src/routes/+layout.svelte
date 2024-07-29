@@ -47,12 +47,12 @@
 
 	:global(a) {
 		color: var(--theme-blue);
-		filter: brightness(150%);
+		filter: brightness(180%);
 		text-decoration: none;
 	}
 
 	:global(a):hover {
-		filter: none;
+		filter: brightness(150%);
 	}
 
 	:global(.section-name) {
