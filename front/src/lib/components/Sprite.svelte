@@ -25,6 +25,7 @@
 	}
 
 	.sprite-image {
+		height: 100%;
 		width: 100%;
 		object-fit: contain;
 		border-radius: 50%;

@@ -8,8 +8,9 @@
 	}
 
 	.footer-wrapper {
-		width: 100vw;
+		position: relative;
 		bottom: 0;
+		width: 100vw;
 		border-top: 8px solid var(--theme-red);
 		padding-top: 15px;
 		padding-bottom: 15px;

@@ -3,6 +3,7 @@
 
 <style>
 	.container {
+		min-height: 100%;
 		max-width: var(--max-page-width);
 		margin-left: auto;
 		margin-right: auto;

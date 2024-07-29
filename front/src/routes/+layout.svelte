@@ -27,11 +27,11 @@
 		margin: 0;
 		height: 100%;
 		overflow-x: hidden;
-		position: relative;
 		background: black;
 	}
 
 	:global(main) {
+		position: relative;
 		font-size: x-large;
 		min-height: 100vh;
 		text-align: justify;
