@@ -162,7 +162,7 @@
 		}
 
 		.landing-left {
-			max-height: 50vh;
+			max-height: 400px;
 			justify-content: center;
 		}
 	}
