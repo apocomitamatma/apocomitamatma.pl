@@ -103,6 +103,7 @@
 
 	.landing-left {
 		flex: 1;
+		aspect-ratio: 1 / 1;
 		position: relative;
 	}
 
