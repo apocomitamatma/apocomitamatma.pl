@@ -114,7 +114,7 @@
 		font-weight: bold;
 		font-size: 3em;
 		margin-bottom: -20px;
-		color: var(--theme-red);
+		color: var(--theme-yellow);
 	}
 
 	.floating-statistics {
