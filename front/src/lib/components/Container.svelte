@@ -9,7 +9,7 @@
 		margin-right: auto;
 		padding-left: 5vw;
 		padding-right: 5vw;
-		padding-top: 5vh;
-		padding-bottom: 5vh;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 </style>

@@ -25,15 +25,13 @@
 		font-family: 'Albert Sans', sans-serif;
 		color: white;
 		margin: 0;
-		height: 100%;
 		overflow-x: hidden;
 		background: black;
 	}
 
 	:global(main) {
-		position: relative;
+		height: 100vh;
 		font-size: x-large;
-		min-height: 100vh;
 		text-align: justify;
 	}
 

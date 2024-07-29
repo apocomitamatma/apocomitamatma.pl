@@ -15,14 +15,13 @@
 	}
 
 	.footer-wrapper {
-		position: relative;
-		bottom: 0;
 		width: 100vw;
 		border-top: 8px solid var(--theme-red);
 		padding-top: 15px;
 		padding-bottom: 15px;
 		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
+		z-index: 1;
 	}
 
 	.footer {
