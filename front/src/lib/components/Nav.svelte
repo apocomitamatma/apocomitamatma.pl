@@ -22,10 +22,10 @@
 			<a href="/contact" class="nav-button">Kontakt</a>
 		</div>
 		<div class="nav-right" class:is-open={isMenuOpen}>
-			<a href="/discord" target="_blank" rel="noopener noreferrer"><Icon icon={faDiscord} /></a>
 			<a href="/youtube" target="_blank" rel="noopener noreferrer"><Icon icon={faYoutube} /></a>
-			<a href="/facebook" target="_blank" rel="noopener noreferrer"><Icon icon={faFacebook} /></a>
+			<a href="/discord" target="_blank" rel="noopener noreferrer"><Icon icon={faDiscord} /></a>
 			<a href="/tiktok" target="_blank" rel="noopener noreferrer"><Icon icon={faTiktok} /></a>
+			<a href="/facebook" target="_blank" rel="noopener noreferrer"><Icon icon={faFacebook} /></a>
 		</div>
 		<div class="menu-toggle">
 			<button on:click={toggleMenu}>{@html toggleMenuSymbol}</button>
