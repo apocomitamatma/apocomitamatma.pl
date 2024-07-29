@@ -4,6 +4,7 @@
 <style>
 	.container {
 		flex: 1 0 auto;
+		width: 100vw;
 		max-width: var(--max-page-width);
 		margin-inline: auto;
 		padding-inline: 5vw;
