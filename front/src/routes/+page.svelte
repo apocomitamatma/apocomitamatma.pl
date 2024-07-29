@@ -158,9 +158,6 @@
 		.landing {
 			flex-direction: column;
 		}
-		:global(.logo) {
-			margin-inlinet: auto;
-		}
 
 		.landing-left {
 			max-height: 400px;
