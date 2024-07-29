@@ -65,7 +65,7 @@
 		width: 100%;
 		height: 100%;
 		background: url('$lib/images/background.png') center/cover fixed no-repeat;
-		filter: brightness(50%);
+		filter: brightness(30%);
 		z-index: -1;
 	}
 
