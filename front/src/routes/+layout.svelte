@@ -18,7 +18,11 @@
 		--theme-yellow: #ffbf01;
 		--theme-blue: #0173f8;
 		--theme-red: #c50000;
-		--max-page-width: 1424px;
+		--layout-max-width: 1424px;
+		--layout-min-height: 100px;
+		--layout-padding-x: 5vw;
+		--layout-padding-y: 15px;
+		--layout-border: 8px solid var(--theme-red);
 	}
 
 	:global(*) {

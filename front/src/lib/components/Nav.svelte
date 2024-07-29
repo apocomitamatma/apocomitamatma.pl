@@ -34,23 +34,19 @@
 </div>
 
 <style>
-	:global(:root) {
-		--nav-height: 100px;
-	}
-
 	.nav-wrapper {
-		border-bottom: 8px solid var(--theme-red);
-		padding-top: 15px;
-		padding-bottom: 15px;
+		border-bottom: var(--layout-border);
 		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
 	}
 
 	.nav {
-		min-height: var(--nav-height);
-		max-width: var(--max-page-width);
+		min-height: var(--layout-min-height);
+		max-width: var(--layout-max-width);
+		padding-inline: var(--layout-padding-x);
+		padding-top: var(--layout-padding-y);
+		padding-bottom: var(--layout-padding-y);
 		margin-inline: auto;
-		padding-inline: 5vw;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -65,10 +61,9 @@
 	}
 
 	.website-name {
-		height: 100px;
-		top: 50%;
-		width: 80%;
+		height: var(--layout-min-height);
 		min-width: 250px;
+		width: 80%;
 		background-image: url('$lib/images/name.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -156,7 +151,7 @@
 		.menu-toggle {
 			display: block;
 			position: absolute;
-			right: 5vw;
+			right: var(--layout-padding-x);
 			transform: translate(0, 100%);
 		}
 

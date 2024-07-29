@@ -10,26 +10,22 @@
 </div>
 
 <style>
-	:root {
-		--footer-min-height: 100px;
-	}
-
 	.footer-wrapper {
 		flex-shrink: 0;
 		width: 100%;
-		border-top: 8px solid var(--theme-red);
-		padding-top: 15px;
-		padding-bottom: 15px;
+		border-top: var(--layout-border);
+		padding-top: var(--layout-padding-y);
+		padding-bottom: var(--layout-padding-y);
 		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
 		z-index: 1;
 	}
 
 	.footer {
-		min-height: var(--footer-min-height);
-		max-width: var(--max-page-width);
+		min-height: var(--layout-min-height);
+		max-width: var(--layout-max-width);
 		margin-inline: auto;
-		padding-inline: 5vw;
+		padding-inline: var(--layout-padding-x);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

@@ -5,10 +5,10 @@
 	.container {
 		flex: 1 0 auto;
 		width: 100vw;
-		max-width: var(--max-page-width);
+		max-width: var(--layout-max-width);
 		margin-inline: auto;
-		padding-inline: 5vw;
-		padding-top: 50px;
-		padding-bottom: 50px;
+		padding-inline: var(--layout-padding-x);
+		padding-top: var(--layout-padding-y);
+		padding-bottom: var(--layout-padding-y);
 	}
 </style>
