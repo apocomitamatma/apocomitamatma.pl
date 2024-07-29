@@ -23,13 +23,14 @@
 					<div class="landing-carousel-element">
 						<div class="number-display">300+</div>
 						<p>
-							przeprowadzonych <a href="/contact">korepetycji</a>.<br />
+							uczniów zadowolonych<br />
+							z <a href="/contact">korepetycji</a><br />
 						</p>
 					</div>
 					{#each categories as { category, target }}
 						<div class="landing-carousel-element">
 							<div class="number-display"><FilmCounter {category} /></div>
-							<p>filmów dla {@html target}.</p>
+							<p>filmów dla {@html target}</p>
 						</div>
 					{/each}
 				</Carousel>
@@ -120,7 +121,7 @@
 	.floating-statistics {
 		filter: brightness(150%);
 		position: absolute;
-		bottom: 20%;
+		bottom: 25%;
 		height: 100px;
 		margin-bottom: -20px;
 		text-align: center;
@@ -131,12 +132,21 @@
 			10px 10px 10px #000000;
 	}
 
+	.floating-statistics a {
+		color: var(--theme-yellow);
+	}
+
+	.floating-statistics a:hover {
+		filter: brightness(80%);
+	}
+
 	.landing-carousel-element {
 		display: flex;
 		justify-content: center;
 	}
 
 	.landing-description {
+		font-size: larger;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
