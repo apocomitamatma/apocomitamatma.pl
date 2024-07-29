@@ -149,6 +149,7 @@
 
 	.landing-description {
 		font-size: larger;
+		text-wrap: balance;
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
