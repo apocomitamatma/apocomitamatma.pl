@@ -51,6 +51,8 @@
 
 	@media (max-width: 1000px) {
 		.footer-row {
+			padding-top: 20px;
+			padding-bottom: 20px;
 			grid-template-columns: unset;
 			gap: 1em;
 		}
