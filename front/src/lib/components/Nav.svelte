@@ -152,11 +152,11 @@
 			display: block;
 			position: absolute;
 			right: var(--layout-padding-x);
-			transform: translate(0, 100%);
+			transform: translate(5px, 100%);
 		}
 
 		.menu-toggle button {
-			font-size: 25px; /* it's a navigation icon */
+			font-size: 25px; /* In pixels since it's a navigation icon */
 			border: none;
 			/* border-width: 8px;
 			border-color: var(--theme-red);
