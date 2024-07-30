@@ -120,7 +120,7 @@
 		}
 
 		.landing-right {
-			margin-bottom: 100px;
+			margin-bottom: max(20vh, 120px);
 			text-align: center;
 		}
 
