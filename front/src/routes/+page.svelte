@@ -118,7 +118,7 @@
 		padding-bottom: 10px;
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1100px) {
 		.landing {
 			grid-template-columns: unset;
 			gap: 20px;
