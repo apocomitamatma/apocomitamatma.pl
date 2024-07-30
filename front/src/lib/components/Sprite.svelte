@@ -9,7 +9,7 @@
 <style>
 	.sprite-image {
 		backdrop-filter: brightness(50%) blur(17px);
-		width: 60%;
+		width: 100%;
 		height: 90%;
 		object-fit: contain;
 		box-shadow: 0px 0px 35px 35px rgba(0, 0, 0, 1);
