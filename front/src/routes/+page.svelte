@@ -104,7 +104,7 @@
 		*/
 		height: calc(100vh - var(--layout-nav-min-height) - var(--layout-padding-y) - 35px);
 
-		max-height: 700px;
+		max-height: 900px;
 		display: grid;
 		justify-items: center;
 		grid-template-columns: 1fr 1fr;
