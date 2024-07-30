@@ -36,12 +36,17 @@
 </div>
 
 <style>
+	:root {
+		--omen-width: 50%;
+	}
+
 	.omens {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
+
 	.omen {
-		width: 50%;
+		width: var(--omen-width);
 	}
 
 	a::after {
@@ -65,6 +70,6 @@
 	}
 
 	a:hover::after {
-		width: 50%;
+		width: var(--omen-width);
 	}
 </style>
