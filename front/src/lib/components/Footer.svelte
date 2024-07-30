@@ -3,7 +3,10 @@
 		<div class="footer-row">
 			<span class="footer-note footer-left">© 2024 apocomitamatma.pl</span>
 			<span class="footer-note footer-right">
-				Projekt i wykonanie strony: <a href="https://github.com/bswck">Bartosz Sławecki</a>
+				Projekt i wykonanie strony:
+				<a href="https://github.com/bswck" title="Lubię też matmę" style="white-space: nowrap">
+					Bartosz Sławecki
+				</a>
 			</span>
 		</div>
 	</footer>
