@@ -35,17 +35,17 @@
 
 <style>
 	.nav-wrapper {
-		border-bottom: var(--layout-border);
+		border-bottom: var(--layout-nav-border);
 		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
 	}
 
 	.nav {
-		min-height: var(--layout-min-height);
+		min-height: var(--layout-nav-min-height);
 		max-width: var(--layout-max-width);
 		padding-inline: var(--layout-padding-x);
-		padding-top: var(--layout-padding-y);
-		padding-bottom: var(--layout-padding-y);
+		padding-top: var(--layout-nav-padding-y);
+		padding-bottom: var(--layout-nav-padding-y);
 		margin-inline: auto;
 		display: flex;
 		justify-content: space-between;
@@ -61,9 +61,9 @@
 	}
 
 	.website-name {
-		height: var(--layout-min-height);
-		min-width: 250px;
+		height: var(--layout-nav-min-height);
 		width: 80%;
+		min-width: var(--layout-logotype-width);
 		background-image: url('$lib/images/name.gif');
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -81,7 +81,7 @@
 	}
 
 	.nav-button {
-		font-size: 1.125rem;
+		font-size: var(--layout-nav-font-size);
 		text-decoration: none;
 		color: inherit;
 		padding: 10px;
@@ -156,7 +156,7 @@
 		}
 
 		.menu-toggle button {
-			font-size: 1.5rem;
+			font-size: 25px; /* it's a navigation icon */
 			border: none;
 			/* border-width: 8px;
 			border-color: var(--theme-red);

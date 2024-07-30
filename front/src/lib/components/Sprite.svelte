@@ -1,33 +1,18 @@
 <script>
 	export let imageUrl;
 	export let spriteId = 'unset';
-	export let borderColor = 'var(--theme-blue)'; // Default border color set to blue
-	export let borderWidth = '8px';
-	export let size = '700px';
 </script>
 
-<div
-	class="sprite-container"
-	style="--border-color: {borderColor}; --border-width: {borderWidth}; --size: {size};"
->
-	<!-- svelte-ignore a11y_img_redundant_alt -->
-	<img src={imageUrl} alt="Sprite image" class="sprite-image" data-sprite-id={spriteId} />
-</div>
+<!-- svelte-ignore a11y_img_redundant_alt -->
+<img src={imageUrl} alt="Sprite image" class="sprite-image" data-sprite-id={spriteId} />
 
 <style>
-	.sprite-container {
-		max-width: var(--size);
-		aspect-ratio: 1 / 1;
-		border-radius: 50%;
-		backdrop-filter: brightness(50%) blur(17px);
-		border: var(--border-width) solid var(--border-color);
-		overflow: hidden;
-	}
-
 	.sprite-image {
-		height: 100%;
-		width: 100%;
+		backdrop-filter: brightness(50%) blur(17px);
+		width: 60%;
+		height: 90%;
 		object-fit: contain;
-		border-radius: 50%;
+		box-shadow: 0px 0px 35px 35px rgba(0, 0, 0, 1);
+		z-index: -1;
 	}
 </style>

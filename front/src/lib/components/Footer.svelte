@@ -13,16 +13,16 @@
 	.footer-wrapper {
 		flex-shrink: 0;
 		width: 100%;
-		border-top: var(--layout-border);
-		padding-top: var(--layout-padding-y);
-		padding-bottom: var(--layout-padding-y);
+		border-top: var(--layout-nav-border);
+		padding-top: var(--layout-nav-padding-y);
+		padding-bottom: var(--layout-nav-padding-y);
 		backdrop-filter: brightness(30%);
 		background-color: rgba(0, 0, 0, 0.2);
 		z-index: 1;
 	}
 
 	.footer {
-		min-height: var(--layout-min-height);
+		min-height: var(--layout-nav-min-height);
 		max-width: var(--layout-max-width);
 		margin-inline: auto;
 		padding-inline: var(--layout-padding-x);
@@ -46,7 +46,7 @@
 	}
 
 	.footer-note {
-		font-size: 1.125rem;
+		font-size: var(--layout-nav-font-size);
 	}
 
 	@media (max-width: 1000px) {

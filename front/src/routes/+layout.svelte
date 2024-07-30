@@ -18,11 +18,16 @@
 		--theme-yellow: #ffbf01;
 		--theme-blue: #0173f8;
 		--theme-red: #c50000;
+		--layout-logotype-width: 300px;
 		--layout-max-width: 1424px;
-		--layout-min-height: 100px;
 		--layout-padding-x: 5vw;
-		--layout-padding-y: 15px;
-		--layout-border: 8px solid var(--theme-red);
+		--layout-padding-y: 40px;
+		--layout-nav-padding-y: 0;
+		--layout-nav-min-height: 100px;
+		--layout-nav-border-width: 8px;
+		--layout-nav-border: var(--layout-nav-border-width) solid var(--theme-red);
+		--layout-nav-font-size: 1.1175rem;
+		--layout-emp-font-size: 1.125rem;
 	}
 
 	:global(*) {
@@ -33,6 +38,10 @@
 		margin: 0;
 		padding: 0;
 		height: 100%;
+	}
+
+	:global(html) {
+		font-size: large;
 	}
 
 	:global(body) {

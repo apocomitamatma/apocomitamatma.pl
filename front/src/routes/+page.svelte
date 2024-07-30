@@ -21,7 +21,7 @@
 			<FiguresSprite />
 			<div class="floating-statistics">
 				<Carousel>
-					<div class="landing-carousel-element">
+					<div class="carousel-element">
 						<div class="number-display">300+</div>
 						<p>
 							uczniów zadowolonych<br />
@@ -29,7 +29,7 @@
 						</p>
 					</div>
 					{#each categories as { category, target }}
-						<div class="landing-carousel-element">
+						<div class="carousel-element">
 							<div class="number-display"><FilmCounter {category} /></div>
 							<p>filmów dla {@html target}</p>
 						</div>
@@ -44,7 +44,7 @@
 					<p><i>Kolorowa matematyka z poczuciem humoru.</i></p>
 					<p>
 						Jesteś na stronie gdzie jest <a href="#o-mnie">trochę o mnie</a>,
-						<a href="/films">o moich filmach</a> i o
+						<a href="/films">o moich filmach</a> <br />i o
 						<a href="/faq">pytaniach, które często dostaję</a>.
 					</p>
 					<p>
@@ -95,47 +95,66 @@
 
 <style>
 	.landing {
-		display: flex;
+		/*
+		I had an idea of making a flexbox that would only include the nav and landing
+		but that conflicts heavily with the layout defined in +layout.svelte.
+
+		As a trade-off, we're calculating the height of the landing to be 100vh
+		in most browsers using this red-flag formula.
+		*/
+		height: calc(100vh - var(--layout-nav-min-height) - var(--layout-padding-y) - 35px);
+
+		max-height: 700px;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: 1fr 1fr;
 		align-items: center;
-		gap: 50px;
 	}
 
 	.landing-item {
-		flex: 1;
 		display: flex;
 		justify-content: center;
 	}
 
 	.landing-left {
-		flex: 1;
-		aspect-ratio: 1 / 1;
+		aspect-ratio: 5 / 4;
+		min-height: 300px;
 		position: relative;
 	}
 
 	.landing-right {
-		flex: 1.5;
-		text-align: center;
+		max-width: 30rem;
+		overflow: visible;
+		text-align: left;
+	}
+
+	.landing-description {
+		font-size: var(--layout-emp-font-size);
+		text-wrap: balance;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 	.number-display {
 		font-weight: bold;
-		font-size: 3em;
-		margin-bottom: -20px;
+		font-size: 3.5em;
+		margin-bottom: -25px;
 		color: var(--theme-yellow);
 	}
 
 	.floating-statistics {
 		filter: brightness(150%);
 		position: absolute;
-		bottom: 25%;
+		bottom: 20%;
 		height: 100px;
 		margin-bottom: -10%;
 		text-align: center;
 		font-weight: bolder;
-		font-size: 1.25rem;
+		font-size: var(--layout-emp-font-size);
 		text-shadow:
-			10px 10px 10px #000000,
-			10px 10px 10px #000000;
+			0px 0px 10px #000000,
+			0px 0px 20px #000000,
+			0px 0px 30px #000000;
 	}
 
 	.floating-statistics a {
@@ -146,21 +165,16 @@
 		filter: brightness(80%);
 	}
 
-	.landing-carousel-element {
+	.carousel-element {
 		display: flex;
 		justify-content: center;
 	}
 
-	.landing-description {
-		font-size: 1.25rem;
-		text-wrap: balance;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-
-	@media (max-width: 1210px) {
+	@media (max-width: 900px) {
 		.landing {
-			flex-direction: column;
+			grid-template-columns: unset;
+			gap: 20px;
+			height: unset;
 		}
 
 		.landing-left {
