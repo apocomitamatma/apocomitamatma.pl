@@ -37,16 +37,20 @@
 
 <style>
 	:root {
-		--omen-width: 50%;
+		--omen-max-width: 100px;
+		--omens-max-width: 400px;
 	}
 
 	.omens {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		width: 100%;
+		max-width: var(--omens-max-width);
+		justify-content: space-between;
 	}
 
 	.omen {
-		width: var(--omen-width);
+		object-fit: cover;
+		max-width: var(--omen-max-width);
 	}
 
 	a::after {
@@ -70,6 +74,7 @@
 	}
 
 	a:hover::after {
-		width: var(--omen-width);
+		width: 100%;
+		max-width: var(--omen-max-width);
 	}
 </style>
