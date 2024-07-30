@@ -20,7 +20,7 @@
 		--theme-red: #c50000;
 		--layout-logotype-width: 300px;
 		--layout-max-width: 1424px;
-		--layout-padding-x: 5vw;
+		--layout-padding-x: min(5vw, 25px);
 		--layout-padding-y: 40px;
 		--layout-nav-padding-y: 0;
 		--layout-nav-min-height: 100px;
