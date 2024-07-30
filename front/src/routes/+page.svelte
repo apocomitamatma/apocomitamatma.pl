@@ -3,6 +3,7 @@
 	import { FiguresSprite } from '$lib/components/sprites';
 
 	import FloatingStatistics from './FloatingStatistics.svelte';
+	import Omens from './Omens.svelte';
 </script>
 
 <svelte:head>
@@ -12,7 +13,7 @@
 
 <section>
 	<div class="landing">
-		<div class="landing-item landing-left landing-sprite">
+		<div class="landing-item landing-left">
 			<FiguresSprite />
 			<FloatingStatistics />
 		</div>
@@ -22,7 +23,7 @@
 				<article>
 					<p><i>Kolorowa matematyka z poczuciem humoru.</i></p>
 					<p>
-						Jesteś na stronie gdzie jest <a href="#o-mnie">trochę o mnie</a>,
+						Jesteś na stronie, gdzie jest <a href="#o-mnie">trochę o mnie</a>,
 						<a href="/films">o moich filmach</a> <br />i o
 						<a href="/faq">pytaniach, które często dostaję</a>.
 					</p>
@@ -30,6 +31,10 @@
 						<b>Szukasz korepetycji?</b> Zapraszam Cię
 						<a href="/contact">tutaj</a>.
 					</p>
+					<p>
+						<b>Powtarzasz do egzaminu?</b> Zapnij pasy i wybierz swój omen.
+					</p>
+					<Omens />
 				</article>
 			</div>
 		</div>
@@ -74,15 +79,15 @@
 
 <style>
 	.landing {
+		min-height: 450px;
 		/*
 		I had an idea of making a flexbox that would only include the nav and landing
-		but that conflicts heavily with the layout defined in +layout.svelte.
+		but that conflicts heavily with the layout defined in `+layout.svelte`.
 
 		As a trade-off, we're calculating the height of the landing to be 100vh
-		in most browsers using this red-flag formula.
+		in most browsers using the *red-flag* formula below.
 		*/
 		height: calc(100vh - var(--layout-nav-min-height) - var(--layout-padding-y) - 35px);
-
 		max-height: 900px;
 		display: grid;
 		justify-items: center;
@@ -103,7 +108,6 @@
 
 	.landing-right {
 		max-width: 30rem;
-		overflow: visible;
 		text-align: left;
 	}
 

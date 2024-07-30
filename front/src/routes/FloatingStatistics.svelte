@@ -1,11 +1,11 @@
 <script>
 	import { Carousel, FilmCounter } from '$lib/components';
 
-	/** @type {Array<{category: 'e8' | 'mp' | 'mr', target: string}>} */
-	const categories = [
-		{ category: 'e8', target: 'ósmoklasistów' },
-		{ category: 'mp', target: 'maturzystów<br>(poziom podstawowy)' },
-		{ category: 'mr', target: 'maturzystów<br>(poziom rozszerzony)' }
+	/** @type {Array<{omen: 'E8' | 'MP' | 'MR', target: string}>} */
+	const omens = [
+		{ omen: 'E8', target: 'ósmoklasistów' },
+		{ omen: 'MP', target: 'maturzystów<br>(poziom podstawowy)' },
+		{ omen: 'MR', target: 'maturzystów<br>(poziom rozszerzony)' }
 	];
 </script>
 
@@ -18,9 +18,9 @@
 				z <a href="/contact">korepetycji</a><br />
 			</p>
 		</div>
-		{#each categories as { category, target }}
+		{#each omens as { omen, target }}
 			<div class="carousel-element">
-				<div class="number-display"><FilmCounter {category} /></div>
+				<div class="number-display"><FilmCounter {omen} /></div>
 				<p>filmów dla {@html target}</p>
 			</div>
 		{/each}

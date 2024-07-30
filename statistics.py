@@ -35,22 +35,22 @@ PLAYLIST_PREFIX = "UU"
 settings_var: ContextVar[YouTubeSettings] = ContextVar("settings_var")
 
 
-class Category(enum.IntFlag, boundary=enum.FlagBoundary.CONFORM):
-    e8 = 1 << 0
-    mp = 1 << 1
-    mr = 1 << 2
-    m = mp | mr
+class Omen(enum.IntFlag, boundary=enum.FlagBoundary.CONFORM):
+    E8 = 1 << 0
+    MP = 1 << 1
+    MR = 1 << 2
+    M = MP | MR
 
     @property
     def is_bulk(self) -> bool:
-        return self is self.m
+        return self is self.M
 
 
 class YouTubeSettings(BaseSettings):
     channel_id: str
     api_key: SecretStr
     playlists_endpoint: str = "https://www.googleapis.com/youtube/v3/playlistItems"
-    category_patterns: dict[Category, re.Pattern]
+    omen_patterns: dict[Omen, re.Pattern]
     model_config = SettingsConfigDict(
         toml_file="statistics.toml",
         env_prefix="YOUTUBE_",
@@ -85,7 +85,7 @@ class YouTubeSettings(BaseSettings):
 
 class YouTubeVideo(BaseModel):
     id: str
-    categories: Category
+    omens: Omen
 
 
 YouTubeStatistics: TypeAlias = dict[str, Annotated[int, Field(default=0)]]
@@ -126,14 +126,14 @@ class YouTubeListRequest(YouTubeRequest):
     page_token: str | None = None
 
 
-def get_categories_from_description(description: str) -> Category:
+def get_omens_from_description(description: str) -> Omen:
     settings = settings_var.get()
-    flags = Category(0)
-    for category, pattern in settings.category_patterns.items():
-        if category.is_bulk and flags:
+    flags = Omen(0)
+    for omen, pattern in settings.omen_patterns.items():
+        if omen.is_bulk and flags:
             break
         if pattern.findall(description):
-            flags |= category
+            flags |= omen
     return flags
 
 
@@ -156,7 +156,7 @@ async def fetch_videos(
         videos = [
             YouTubeVideo(
                 id=item.id,
-                categories=get_categories_from_description(
+                omens=get_omens_from_description(
                     item.snippet.description,
                 ),
             )
@@ -177,12 +177,10 @@ async def fetch_all_videos() -> list[YouTubeVideo]:
 
 async def get_stats() -> YouTubeStatistics:
     videos = await fetch_all_videos()
-    counter: dict[Category, int] = Counter()
+    counter: dict[Omen, int] = Counter()
     for video in videos:
-        counter.update(video.categories)  # type: ignore[arg-type]
-    return {
-        category.name: count for category, count in counter.items() if category.name
-    }
+        counter.update(video.omens)  # type: ignore[arg-type]
+    return {omen.name: count for omen, count in counter.items() if omen.name}
 
 
 class Statistics(BaseModel):

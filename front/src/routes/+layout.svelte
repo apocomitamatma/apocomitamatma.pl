@@ -25,7 +25,8 @@
 		--layout-nav-padding-y: 0;
 		--layout-nav-min-height: 100px;
 		--layout-nav-border-width: 8px;
-		--layout-nav-border: var(--layout-nav-border-width) solid var(--theme-red);
+		--layout-nav-border-color: var(--theme-red);
+		--layout-nav-border: var(--layout-nav-border-width) solid var(--layout-nav-border-color);
 		--layout-nav-font-size: 1.1175rem;
 		--layout-emp-font-size: 1.125rem;
 	}
