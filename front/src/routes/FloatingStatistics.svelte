@@ -3,9 +3,15 @@
 
 	/** @type {Array<{omen: 'E8' | 'MP' | 'MR', target: string}>} */
 	const omens = [
-		{ omen: 'E8', target: 'ósmoklasistów' },
-		{ omen: 'MP', target: 'maturzystów<br>(poziom podstawowy)' },
-		{ omen: 'MR', target: 'maturzystów<br>(poziom rozszerzony)' }
+		{ omen: 'E8', target: '<span style="color: var(--theme-blue)">ósmoklasistów</span>' },
+		{
+			omen: 'MP',
+			target: 'maturzystów<br>(poziom <span style="color: var(--theme-yellow)">podstawowy</span>)'
+		},
+		{
+			omen: 'MR',
+			target: 'maturzystów<br>(poziom <span style="color: var(--theme-red)">rozszerzony</span>)'
+		}
 	];
 </script>
 

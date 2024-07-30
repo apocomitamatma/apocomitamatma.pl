@@ -1,9 +1,8 @@
 <script>
-	import { Logo } from '$lib/components';
+	import { Logo, Omens } from '$lib/components';
 	import { FiguresSprite } from '$lib/components/sprites';
 
 	import FloatingStatistics from './FloatingStatistics.svelte';
-	import Omens from './Omens.svelte';
 </script>
 
 <svelte:head>
@@ -12,7 +11,7 @@
 </svelte:head>
 
 <section>
-	<div class="landing">
+	<div id="entry" class="landing">
 		<div class="landing-item landing-left">
 			<FiguresSprite />
 			<FloatingStatistics />
@@ -79,16 +78,6 @@
 
 <style>
 	.landing {
-		min-height: 450px;
-		/*
-		I had an idea of making a flexbox that would only include the nav and landing
-		but that conflicts heavily with the layout defined in `+layout.svelte`.
-
-		As a trade-off, we're calculating the height of the landing to be 100vh
-		in most browsers using the *red-flag* formula below.
-		*/
-		height: calc(100vh - var(--layout-nav-min-height) - var(--layout-padding-y) - 35px);
-		max-height: 900px;
 		display: grid;
 		justify-items: center;
 		grid-template-columns: 1fr 1fr;
@@ -109,6 +98,7 @@
 	.landing-right {
 		max-width: 30rem;
 		text-align: left;
+		justify-self: left;
 	}
 
 	.landing-description {
@@ -122,12 +112,16 @@
 		.landing {
 			grid-template-columns: unset;
 			gap: 20px;
-			height: unset;
 		}
 
-		.landing-left {
+		.landing-left,
+		.landing-right {
 			max-height: 400px;
-			justify-content: center;
+			justify-self: center;
+		}
+
+		.landing-right {
+			margin-bottom: 100px;
 		}
 	}
 </style>

@@ -4,5 +4,6 @@ export {default as FilmCounter} from './FilmCounter.svelte';
 export {default as Footer} from './Footer.svelte';
 export {default as Icon} from './Icon.svelte';
 export {default as Logo} from './Logo.svelte';
+export {default as Omens} from './Omens.svelte';
 export {default as Nav} from './Nav.svelte';
 export {default as Sprite} from './Sprite.svelte';
