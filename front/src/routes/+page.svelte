@@ -91,7 +91,6 @@
 
 	.landing-left {
 		aspect-ratio: 5 / 4;
-		min-height: 300px;
 		position: relative;
 	}
 
