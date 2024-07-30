@@ -121,6 +121,11 @@
 
 		.landing-right {
 			margin-bottom: 100px;
+			text-align: center;
+		}
+
+		:global(.omens) {
+			margin-inline: auto;
 		}
 	}
 </style>
