@@ -140,7 +140,7 @@
 
 		.nav-right {
 			margin-top: 20px;
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 		}
 
 		.nav-center.is-open,
