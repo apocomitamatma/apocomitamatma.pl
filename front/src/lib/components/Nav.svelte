@@ -2,8 +2,10 @@
 	import { faDiscord, faYoutube, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons';
 	import Icon from './Icon.svelte';
 
-	let isMenuOpen = false;
-	$: toggleMenuSymbol = isMenuOpen ? '<span style="filter: brightness(50%);">☰</span>' : '☰';
+	let isMenuOpen = $state(false);
+	let toggleMenuSymbol = $derived(
+		isMenuOpen ? '<span style="filter: brightness(50%);">☰</span>' : '☰'
+	);
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -28,7 +30,7 @@
 			<a href="/facebook" target="_blank" rel="noopener noreferrer"><Icon icon={faFacebook} /></a>
 		</div>
 		<div class="menu-toggle">
-			<button on:click={toggleMenu}>{@html toggleMenuSymbol}</button>
+			<button onclick={toggleMenu}>{@html toggleMenuSymbol}</button>
 		</div>
 	</nav>
 </div>

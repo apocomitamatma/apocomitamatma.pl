@@ -26,8 +26,8 @@
 	{#each omens as { omen, srcStatic, srcAnimated }}
 		<a
 			href="/films/#{omen}"
-			on:mouseenter={(event) => changeChildImageSource(event, srcAnimated)}
-			on:mouseleave={(event) => changeChildImageSource(event, srcStatic)}
+			onmouseenter={(event) => changeChildImageSource(event, srcAnimated)}
+			onmouseleave={(event) => changeChildImageSource(event, srcStatic)}
 			data-omen={omen}
 		>
 			<img class="omen" src={srcStatic} alt={omen} />

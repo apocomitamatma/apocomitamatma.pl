@@ -1,12 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
-
 	import statistics from '$lib/statistics.json';
 
 	/**
-	 * @type {'E8' | 'MP' | 'MR'}
+	 * @type {{omen: 'E8' | 'MP' | 'MR'}}
 	 */
-	export let omen;
+	let { omen } = $props();
 
 	const videoCounts = statistics.videoCount;
 	export const videoCount = videoCounts[omen];

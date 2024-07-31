@@ -1,23 +1,21 @@
 <script>
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 
-	export let icon;
-
-	/** @type {import('@fortawesome/fontawesome-svg-core').SizeProp}*/
-	export let size = 'xl';
-	let bounce = false;
+	/** @type {{icon: any, animation?: any, size?: import('@fortawesome/fontawesome-svg-core').SizeProp}}*/
+	let { icon, animation = 'bounce', size = 'xl' } = $props();
+	let animate = $state.frozen(false);
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
-	on:mouseenter={() => {
-		bounce = true;
+	onmouseenter={() => {
+		animate = true;
 	}}
-	on:mouseleave={() => {
-		bounce = false;
+	onmouseleave={() => {
+		animate = false;
 	}}
 >
-	{#key bounce}
-		<FontAwesomeIcon {bounce} {icon} {size} />
+	{#key animate}
+		<FontAwesomeIcon {...{ [animation]: animate }} {icon} {size} />
 	{/key}
 </div>

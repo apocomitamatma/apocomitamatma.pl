@@ -1,6 +1,6 @@
 <script>
-	export let imageUrl;
-	export let spriteId = 'unset';
+	/** @type{ {imageUrl: string, spriteId?: 'rizz' | 'figures' | 'delta' | 'unset'} }*/
+	let { imageUrl, spriteId = 'unset' } = $props();
 </script>
 
 <!-- svelte-ignore a11y_img_redundant_alt -->
