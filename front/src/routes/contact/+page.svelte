@@ -200,8 +200,9 @@
 		font-size: 1.2em;
 		padding: 10px;
 		border-radius: 5px;
+		backdrop-filter: brightness(50%) blur(25px);
+		background: transparent;
 		border: 2px solid var(--theme-blue);
-		background-color: rgba(255, 255, 255, 0.1);
 		color: white;
 	}
 
