@@ -149,9 +149,7 @@
 		</div>
 
 		<div class="form-right">
-			<!-- svelte-ignore a11y_label_has_associated_control -->
-			<label>Piszę w sprawie:</label>
-			<textarea bind:value={otherQuestions} placeholder="Opisz swoją sprawę..."></textarea>
+			<textarea bind:value={otherQuestions} placeholder="Treść wiadomości..."></textarea>
 		</div>
 	</form>
 </section>

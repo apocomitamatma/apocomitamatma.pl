@@ -23,7 +23,7 @@
 					<p><i>Kolorowa matematyka z poczuciem humoru.</i></p>
 					<p>
 						Jesteś na stronie, gdzie jest <a href="#o-mnie">trochę o mnie</a>,
-						<a href="/films">o moich filmach</a> <br />i o
+						<a href="/films">o moich filmach</a> i o
 						<a href="/faq">pytaniach, które często dostaję</a>.
 					</p>
 					<p>
