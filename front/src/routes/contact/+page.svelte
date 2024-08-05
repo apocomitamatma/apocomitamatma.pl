@@ -15,7 +15,6 @@
 	<h1>Kontakt</h1>
 	<form class="form-grid">
 		<div class="form-left">
-			<!-- Piszę w sprawie -->
 			<div class="form-row">
 				<fieldset>
 					<legend>Interesują mnie...</legend>
