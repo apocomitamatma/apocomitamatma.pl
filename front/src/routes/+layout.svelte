@@ -76,9 +76,14 @@
 
 	:global(.section-name) {
 		scroll-margin-top: 20px;
+		filter: brightness(180%);
 		color: inherit;
 		filter: none;
 		text-decoration: inherit;
+	}
+
+	:global(.section-name):hover::after {
+		filter: brightness(180%);
 	}
 
 	:global(.section-name):hover::after {
