@@ -1,4 +1,5 @@
 <script>
+	import '../reset.css';
 	import { Nav, Container, Footer } from '$lib/components';
 </script>
 
@@ -69,6 +70,10 @@
 		filter: brightness(150%);
 	}
 
+	:global(h1, h2, h3) /* h4, h5, h6 */ {
+		color: var(--theme-yellow);
+	}
+
 	:global(.section-name) {
 		scroll-margin-top: 20px;
 		color: inherit;
@@ -107,7 +112,7 @@
 		height: 100%;
 		height: 100svh;
 		background: url('$lib/images/background.png') center/cover fixed repeat;
-		filter: brightness(15%);
+		filter: blur(5px) brightness(15%);
 		z-index: -1;
 	}
 </style>
