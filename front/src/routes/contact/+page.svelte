@@ -174,10 +174,6 @@
 		grid-column: 2 / 3;
 	}
 
-	.form-full {
-		grid-column: 1 / 3;
-	}
-
 	.form-row {
 		margin-bottom: 20px; /* Space between form rows */
 	}
@@ -211,14 +207,6 @@
 		margin-bottom: 10px;
 		width: auto;
 		text-align: left; /* Ensures text is aligned to the left */
-	}
-
-	.input-field label {
-		width: 100%;
-	}
-
-	.input-field {
-		width: 100%;
 	}
 
 	input[type='radio'] {
@@ -257,8 +245,7 @@
 		}
 
 		.form-left,
-		.form-right,
-		.form-full {
+		.form-right {
 			grid-column: 1 / 2;
 		}
 	}
