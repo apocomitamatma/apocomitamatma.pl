@@ -7,7 +7,7 @@
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
-<div
+<span
 	onmouseenter={() => {
 		animate = true;
 	}}
@@ -18,4 +18,4 @@
 	{#key animate}
 		<FontAwesomeIcon {...{ [animation]: animate }} {icon} {size} />
 	{/key}
-</div>
+</span>

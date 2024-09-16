@@ -1,14 +1,19 @@
 <script>
 	import logoImage from '$lib/images/brand.gif';
+
+	let { inline = true } = $props();
 </script>
 
-<div class="logo">
-	<img src={logoImage} alt="ApocoMItaMATMA.pl" />
-</div>
+<span class="logo">
+	<img src={logoImage} data-inline={inline} alt="ApocoMItaMATMA.pl" />
+</span>
 
 <style>
 	.logo img {
-		width: 80%;
 		max-width: var(--layout-logotype-width);
+	}
+	.logo img[data-inline='true'] {
+		margin-bottom: -0.5em;
+		max-height: 1.5em;
 	}
 </style>

@@ -18,7 +18,7 @@
 		</div>
 		<div class="landing-item landing-right">
 			<div class="landing-description">
-				<Logo />
+				<Logo inline={false} />
 				<article>
 					<p><i>Kolorowa matematyka z poczuciem humoru.</i></p>
 					<p>
@@ -107,7 +107,7 @@
 		padding-bottom: 10px;
 	}
 
-	@media (max-width: 1100px) {
+	@media (max-width: 1030px) and (min-height: 1030px), (max-width: 676px) {
 		.landing {
 			grid-template-columns: unset;
 			gap: 20px;

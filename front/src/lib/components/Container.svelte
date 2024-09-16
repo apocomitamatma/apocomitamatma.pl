@@ -1,5 +1,10 @@
 <!-- note: it is only meant for one container to be on the page -->
-<div class="container"><slot /></div>
+<script>
+	/** @type {{children: import("svelte").Snippet}} */
+	let { children } = $props();
+</script>
+
+<div class="container">{@render children()}</div>
 
 <style>
 	.container {

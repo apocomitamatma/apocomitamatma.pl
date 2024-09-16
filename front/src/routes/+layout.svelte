@@ -1,16 +1,16 @@
 <script>
 	import '../reset.css';
 	import { Nav, Container, Footer } from '$lib/components';
+
+	let { children } = $props();
 </script>
 
-<main>
+<div class="main">
 	<div class="background"></div>
 	<Nav />
-	<Container>
-		<slot />
-	</Container>
+	<Container>{@render children()}</Container>
 	<Footer />
-</main>
+</div>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap');
@@ -19,7 +19,7 @@
 		--theme-yellow: #ffbf01;
 		--theme-blue: #0173f8;
 		--theme-red: #c50000;
-		--layout-logotype-width: 300px;
+		--layout-logotype-width: 16rem;
 		--layout-max-width: 1424px;
 		--layout-padding-x: min(5vw, 25px);
 		--layout-padding-y: 40px;
@@ -50,16 +50,6 @@
 		background: black;
 	}
 
-	:global(main) {
-		font-family: 'Albert Sans', sans-serif;
-		color: white;
-		height: 100%;
-		display: flex;
-		overflow-x: hidden;
-		flex-direction: column;
-		text-align: justify;
-	}
-
 	:global(a) {
 		color: var(--theme-blue);
 		filter: brightness(180%);
@@ -70,30 +60,26 @@
 		filter: brightness(150%);
 	}
 
-	:global(h1, h2, h3) /* h4, h5, h6 */ {
-		color: var(--theme-yellow);
-	}
-
 	:global(.section-name) {
 		scroll-margin-top: 20px;
 		filter: brightness(180%);
 		color: inherit;
 		filter: none;
 		text-decoration: inherit;
+		transition: color;
+		transition-duration: 0.5s;
 	}
 
-	:global(.section-name):hover::after {
-		filter: brightness(180%);
-	}
-
+	:global(.section-name):hover,
 	:global(.section-name):hover::after {
 		content: ' 🔗';
-		color: darkgrey;
+		color: #878787;
+		transition: color;
+		transition-duration: 0.5s;
 	}
 
 	/* For objects to take up whole vh on load (PC screens only) */
 	:global(#entry) {
-		min-height: 420px;
 		/*
 		I had an idea of making a flexbox that would only include the nav and landing
 		but that conflicts heavily with the layout defined in `+layout.svelte`.
@@ -102,13 +88,16 @@
 		in most browsers using the *red-flag* formula below.
 		*/
 		height: calc(100vh - var(--layout-nav-min-height) - var(--layout-padding-y) - 35px);
-		max-height: 900px;
 	}
 
-	@media (max-width: 1100px) {
-		:global(#entry) {
-			height: unset;
-		}
+	.main {
+		font-family: 'Albert Sans', sans-serif;
+		color: white;
+		height: 100%;
+		display: flex;
+		overflow-x: hidden;
+		flex-direction: column;
+		text-align: justify;
 	}
 
 	.background {

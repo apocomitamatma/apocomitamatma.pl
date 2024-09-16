@@ -13,17 +13,17 @@
 </script>
 
 <div class="nav-wrapper">
-	<nav class="nav">
+	<nav class="nav" data-is-open={isMenuOpen}>
 		<div class="nav-left">
 			<a href="/" class="website-name"> </a>
 		</div>
-		<div class="nav-center" class:is-open={isMenuOpen}>
+		<div class="nav-center" data-is-open={isMenuOpen}>
 			<a href="/" class="nav-button">Początek</a>
 			<a href="/films" class="nav-button">Filmy</a>
 			<a href="/faq" class="nav-button">FAQ</a>
 			<a href="/contact" class="nav-button">Kontakt</a>
 		</div>
-		<div class="nav-right" class:is-open={isMenuOpen}>
+		<div class="nav-right" data-is-open={isMenuOpen}>
 			<a href="/youtube" target="_blank" rel="noopener noreferrer"><Icon icon={faYoutube} /></a>
 			<a href="/discord" target="_blank" rel="noopener noreferrer"><Icon icon={faDiscord} /></a>
 			<a href="/tiktok" target="_blank" rel="noopener noreferrer"><Icon icon={faTiktok} /></a>
@@ -106,11 +106,15 @@
 		display: none;
 	}
 
-	@media (max-width: 1210px) {
+	@media (max-width: 1030px) {
 		.nav {
 			flex-direction: column;
 			align-items: center;
-			gap: 25px;
+			gap: 2rem;
+		}
+
+		.nav[data-is-open='true'] {
+			margin-bottom: 2rem;
 		}
 
 		.website-name {
@@ -140,13 +144,8 @@
 			align-items: center;
 		}
 
-		.nav-right {
-			margin-top: 20px;
-			margin-bottom: 40px;
-		}
-
-		.nav-center.is-open,
-		.nav-right.is-open {
+		.nav-center[data-is-open='true'],
+		.nav-right[data-is-open='true'] {
 			display: flex;
 		}
 
@@ -154,15 +153,11 @@
 			display: block;
 			position: absolute;
 			right: var(--layout-padding-x);
-			transform: translate(5px, 100%);
 		}
 
 		.menu-toggle button {
-			font-size: 25px; /* In pixels since it's a navigation icon */
+			font-size: 3.5rem;
 			border: none;
-			/* border-width: 8px;
-			border-color: var(--theme-red);
-			border-radius: 20%; */
 			color: var(--theme-yellow);
 			background: transparent;
 		}

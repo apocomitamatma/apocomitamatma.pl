@@ -1,7 +1,11 @@
+<script>
+	let year = $state(new Date().getFullYear());
+</script>
+
 <div class="footer-wrapper">
 	<footer class="footer">
 		<div class="footer-row">
-			<span class="footer-note footer-left">© 2024 apocomitamatma.pl</span>
+			<span class="footer-note footer-left">© {year} apocomitamatma.pl</span>
 			<span class="footer-note footer-right">
 				Projekt i <a href="https://github.com/apocomitamatma/apocomitamatma.pl">wykonanie</a>
 				strony:
@@ -53,7 +57,7 @@
 		font-size: var(--layout-nav-font-size);
 	}
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1030px) {
 		.footer-row {
 			padding-top: 20px;
 			padding-bottom: 20px;
